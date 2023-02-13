@@ -1,3 +1,7 @@
+<script>
+  export const prerender = true;
+</script>
+
 <h1>
   <a href="/">home</a>
   <a href="/about">about</a>
