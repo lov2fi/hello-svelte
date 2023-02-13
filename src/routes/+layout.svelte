@@ -1,9 +1,9 @@
 <script>
-  export const prerender = true;
+  import { base } from '$app/paths';
 </script>
 
 <h1>
-  <a href="/">home</a>
-  <a href="/about">about</a>
+  <a href="{base}/">home</a>
+  <a href="{base}/about">about</a>
 </h1>
 <slot />
