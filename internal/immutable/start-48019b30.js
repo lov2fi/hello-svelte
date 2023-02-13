@@ -900,7 +900,7 @@ const __vitePreload = function preload(baseModule, deps, importerUrl) {
 };
 const matchers = {};
 const nodes = [
-  () => __vitePreload(() => import("./chunks/0-9fa47ffa.js"), true ? ["./chunks/0-9fa47ffa.js","./components/pages/_layout.svelte-ddc42f4c.js","./chunks/index-8e46f45b.js"] : void 0, import.meta.url),
+  () => __vitePreload(() => import("./chunks/0-66927047.js"), true ? ["./chunks/0-66927047.js","./components/pages/_layout.svelte-259565f3.js","./chunks/index-8e46f45b.js"] : void 0, import.meta.url),
   () => __vitePreload(() => import("./chunks/1-a94451f6.js"), true ? ["./chunks/1-a94451f6.js","./components/error.svelte-0b86d732.js","./chunks/index-8e46f45b.js","./chunks/singletons-18cf266c.js"] : void 0, import.meta.url),
   () => __vitePreload(() => import("./chunks/2-e674dca3.js"), true ? ["./chunks/2-e674dca3.js","./components/pages/_page.svelte-d97cec90.js","./chunks/index-8e46f45b.js"] : void 0, import.meta.url),
   () => __vitePreload(() => import("./chunks/3-4ea071d7.js"), true ? ["./chunks/3-4ea071d7.js","./chunks/_page-f76d60a1.js","./components/pages/about/_page.svelte-b8e729de.js","./chunks/index-8e46f45b.js"] : void 0, import.meta.url)

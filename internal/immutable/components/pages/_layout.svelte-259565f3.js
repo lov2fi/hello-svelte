@@ -10,13 +10,13 @@ function create_fragment(ctx) {
   let current;
   const default_slot_template = (
     /*#slots*/
-    ctx[2].default
+    ctx[1].default
   );
   const default_slot = create_slot(
     default_slot_template,
     ctx,
     /*$$scope*/
-    ctx[1],
+    ctx[0],
     null
   );
   return {
@@ -70,20 +70,20 @@ function create_fragment(ctx) {
     p(ctx2, [dirty]) {
       if (default_slot) {
         if (default_slot.p && (!current || dirty & /*$$scope*/
-        2)) {
+        1)) {
           update_slot_base(
             default_slot,
             default_slot_template,
             ctx2,
             /*$$scope*/
-            ctx2[1],
+            ctx2[0],
             !current ? get_all_dirty_from_scope(
               /*$$scope*/
-              ctx2[1]
+              ctx2[0]
             ) : get_slot_changes(
               default_slot_template,
               /*$$scope*/
-              ctx2[1],
+              ctx2[0],
               dirty,
               null
             ),
@@ -114,20 +114,16 @@ function create_fragment(ctx) {
 }
 function instance($$self, $$props, $$invalidate) {
   let { $$slots: slots = {}, $$scope } = $$props;
-  const prerender = true;
   $$self.$$set = ($$props2) => {
     if ("$$scope" in $$props2)
-      $$invalidate(1, $$scope = $$props2.$$scope);
+      $$invalidate(0, $$scope = $$props2.$$scope);
   };
-  return [prerender, $$scope, slots];
+  return [$$scope, slots];
 }
 class Layout extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance, create_fragment, safe_not_equal, { prerender: 0 });
-  }
-  get prerender() {
-    return this.$$.ctx[0];
+    init(this, options, instance, create_fragment, safe_not_equal, {});
   }
 }
 export {
