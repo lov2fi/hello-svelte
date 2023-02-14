@@ -471,10 +471,41 @@ video {
 .contents {
   display: contents;
 }
+.list-inside {
+  list-style-position: inside;
+}
+.list-outside {
+  list-style-position: outside;
+}
+.list-\[upper-roman\] {
+  list-style-type: upper-roman;
+}
+.list-disc {
+  list-style-type: disc;
+}
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.p-10 {
+  padding: 2.5rem;
+}
+.pl-10 {
+  padding-left: 2.5rem;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
+.font-bold {
+  font-weight: 700;
+}
 .underline {
   text-decoration-line: underline;
 }
+html{background-color:#fb923c}

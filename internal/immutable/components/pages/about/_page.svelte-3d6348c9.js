@@ -1,4 +1,4 @@
-import { S as SvelteComponent, i as init, s as safe_not_equal, a as space, e as empty, c as claim_space, b as insert_hydration, C as noop, J as destroy_each, h as detach, k as element, q as text, l as claim_element, m as children, r as claim_text, E as append_hydration } from "../../../chunks/index-8e46f45b.js";
+import { S as SvelteComponent, i as init, s as safe_not_equal, k as element, q as text, a as space, l as claim_element, m as children, r as claim_text, h as detach, c as claim_space, n as attr, b as insert_hydration, E as append_hydration, C as noop, J as destroy_each } from "../../../chunks/index-8e46f45b.js";
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
   child_ctx[3] = list[i];
@@ -10,66 +10,52 @@ function get_each_context_1(ctx, list, i) {
   return child_ctx;
 }
 function create_each_block_1(ctx) {
-  let h2;
+  let li;
   let t0_value = (
     /*product*/
     ctx[6].title + ""
   );
   let t0;
   let t1;
-  let h3;
-  let t2;
-  let t3_value = (
+  let t2_value = (
     /*product*/
     ctx[6].price + ""
   );
+  let t2;
   let t3;
-  let t4;
   return {
     c() {
-      h2 = element("h2");
+      li = element("li");
       t0 = text(t0_value);
-      t1 = space();
-      h3 = element("h3");
-      t2 = text("($ ");
-      t3 = text(t3_value);
-      t4 = text(")");
+      t1 = text(" (only $ ");
+      t2 = text(t2_value);
+      t3 = text(")");
     },
     l(nodes) {
-      h2 = claim_element(nodes, "H2", {});
-      var h2_nodes = children(h2);
-      t0 = claim_text(h2_nodes, t0_value);
-      h2_nodes.forEach(detach);
-      t1 = claim_space(nodes);
-      h3 = claim_element(nodes, "H3", {});
-      var h3_nodes = children(h3);
-      t2 = claim_text(h3_nodes, "($ ");
-      t3 = claim_text(h3_nodes, t3_value);
-      t4 = claim_text(h3_nodes, ")");
-      h3_nodes.forEach(detach);
+      li = claim_element(nodes, "LI", {});
+      var li_nodes = children(li);
+      t0 = claim_text(li_nodes, t0_value);
+      t1 = claim_text(li_nodes, " (only $ ");
+      t2 = claim_text(li_nodes, t2_value);
+      t3 = claim_text(li_nodes, ")");
+      li_nodes.forEach(detach);
     },
     m(target, anchor) {
-      insert_hydration(target, h2, anchor);
-      append_hydration(h2, t0);
-      insert_hydration(target, t1, anchor);
-      insert_hydration(target, h3, anchor);
-      append_hydration(h3, t2);
-      append_hydration(h3, t3);
-      append_hydration(h3, t4);
+      insert_hydration(target, li, anchor);
+      append_hydration(li, t0);
+      append_hydration(li, t1);
+      append_hydration(li, t2);
+      append_hydration(li, t3);
     },
     p: noop,
     d(detaching) {
       if (detaching)
-        detach(h2);
-      if (detaching)
-        detach(t1);
-      if (detaching)
-        detach(h3);
+        detach(li);
     }
   };
 }
 function create_each_block(ctx) {
-  let p;
+  let li;
   let t0_value = (
     /*user*/
     ctx[3].firstName + ""
@@ -84,38 +70,42 @@ function create_each_block(ctx) {
   let t3;
   return {
     c() {
-      p = element("p");
+      li = element("li");
       t0 = text(t0_value);
-      t1 = text("(");
+      t1 = text(" (");
       t2 = text(t2_value);
       t3 = text(")");
     },
     l(nodes) {
-      p = claim_element(nodes, "P", {});
-      var p_nodes = children(p);
-      t0 = claim_text(p_nodes, t0_value);
-      t1 = claim_text(p_nodes, "(");
-      t2 = claim_text(p_nodes, t2_value);
-      t3 = claim_text(p_nodes, ")");
-      p_nodes.forEach(detach);
+      li = claim_element(nodes, "LI", {});
+      var li_nodes = children(li);
+      t0 = claim_text(li_nodes, t0_value);
+      t1 = claim_text(li_nodes, " (");
+      t2 = claim_text(li_nodes, t2_value);
+      t3 = claim_text(li_nodes, ")");
+      li_nodes.forEach(detach);
     },
     m(target, anchor) {
-      insert_hydration(target, p, anchor);
-      append_hydration(p, t0);
-      append_hydration(p, t1);
-      append_hydration(p, t2);
-      append_hydration(p, t3);
+      insert_hydration(target, li, anchor);
+      append_hydration(li, t0);
+      append_hydration(li, t1);
+      append_hydration(li, t2);
+      append_hydration(li, t3);
     },
     p: noop,
     d(detaching) {
       if (detaching)
-        detach(p);
+        detach(li);
     }
   };
 }
 function create_fragment(ctx) {
-  let t;
-  let each1_anchor;
+  let h1;
+  let t0;
+  let t1;
+  let ul0;
+  let t2;
+  let ul1;
   let each_value_1 = (
     /*products*/
     ctx[0]
@@ -134,34 +124,59 @@ function create_fragment(ctx) {
   }
   return {
     c() {
+      h1 = element("h1");
+      t0 = text("Async Waterfall Test");
+      t1 = space();
+      ul0 = element("ul");
       for (let i = 0; i < each_blocks_1.length; i += 1) {
         each_blocks_1[i].c();
       }
-      t = space();
+      t2 = space();
+      ul1 = element("ul");
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].c();
       }
-      each1_anchor = empty();
+      this.h();
     },
     l(nodes) {
+      h1 = claim_element(nodes, "H1", { class: true });
+      var h1_nodes = children(h1);
+      t0 = claim_text(h1_nodes, "Async Waterfall Test");
+      h1_nodes.forEach(detach);
+      t1 = claim_space(nodes);
+      ul0 = claim_element(nodes, "UL", { class: true });
+      var ul0_nodes = children(ul0);
       for (let i = 0; i < each_blocks_1.length; i += 1) {
-        each_blocks_1[i].l(nodes);
+        each_blocks_1[i].l(ul0_nodes);
       }
-      t = claim_space(nodes);
+      ul0_nodes.forEach(detach);
+      t2 = claim_space(nodes);
+      ul1 = claim_element(nodes, "UL", { class: true });
+      var ul1_nodes = children(ul1);
       for (let i = 0; i < each_blocks.length; i += 1) {
-        each_blocks[i].l(nodes);
+        each_blocks[i].l(ul1_nodes);
       }
-      each1_anchor = empty();
+      ul1_nodes.forEach(detach);
+      this.h();
+    },
+    h() {
+      attr(h1, "class", "text-2xl font-bold");
+      attr(ul0, "class", "list-inside list-[upper-roman] p-10");
+      attr(ul1, "class", "list-outside list-disc pl-10");
     },
     m(target, anchor) {
+      insert_hydration(target, h1, anchor);
+      append_hydration(h1, t0);
+      insert_hydration(target, t1, anchor);
+      insert_hydration(target, ul0, anchor);
       for (let i = 0; i < each_blocks_1.length; i += 1) {
-        each_blocks_1[i].m(target, anchor);
+        each_blocks_1[i].m(ul0, null);
       }
-      insert_hydration(target, t, anchor);
+      insert_hydration(target, t2, anchor);
+      insert_hydration(target, ul1, anchor);
       for (let i = 0; i < each_blocks.length; i += 1) {
-        each_blocks[i].m(target, anchor);
+        each_blocks[i].m(ul1, null);
       }
-      insert_hydration(target, each1_anchor, anchor);
     },
     p(ctx2, [dirty]) {
       if (dirty & /*products*/
@@ -176,7 +191,7 @@ function create_fragment(ctx) {
           } else {
             each_blocks_1[i] = create_each_block_1(child_ctx);
             each_blocks_1[i].c();
-            each_blocks_1[i].m(t.parentNode, t);
+            each_blocks_1[i].m(ul0, null);
           }
         }
         for (; i < each_blocks_1.length; i += 1) {
@@ -196,7 +211,7 @@ function create_fragment(ctx) {
           } else {
             each_blocks[i] = create_each_block(child_ctx);
             each_blocks[i].c();
-            each_blocks[i].m(each1_anchor.parentNode, each1_anchor);
+            each_blocks[i].m(ul1, null);
           }
         }
         for (; i < each_blocks.length; i += 1) {
@@ -208,12 +223,18 @@ function create_fragment(ctx) {
     i: noop,
     o: noop,
     d(detaching) {
+      if (detaching)
+        detach(h1);
+      if (detaching)
+        detach(t1);
+      if (detaching)
+        detach(ul0);
       destroy_each(each_blocks_1, detaching);
       if (detaching)
-        detach(t);
-      destroy_each(each_blocks, detaching);
+        detach(t2);
       if (detaching)
-        detach(each1_anchor);
+        detach(ul1);
+      destroy_each(each_blocks, detaching);
     }
   };
 }

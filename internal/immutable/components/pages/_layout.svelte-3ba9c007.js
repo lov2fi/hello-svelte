@@ -1,6 +1,7 @@
 import { S as SvelteComponent, i as init, s as safe_not_equal, D as create_slot, k as element, q as text, a as space, l as claim_element, m as children, r as claim_text, h as detach, c as claim_space, n as attr, b as insert_hydration, E as append_hydration, F as update_slot_base, G as get_all_dirty_from_scope, H as get_slot_changes, f as transition_in, t as transition_out } from "../../chunks/index-8e46f45b.js";
 import { b as base } from "../../chunks/paths-d0376391.js";
 const app = "";
+const _layout_svelte_svelte_type_style_lang = "";
 function create_fragment(ctx) {
   let h1;
   let a0;
@@ -35,7 +36,7 @@ function create_fragment(ctx) {
       this.h();
     },
     l(nodes) {
-      h1 = claim_element(nodes, "H1", {});
+      h1 = claim_element(nodes, "H1", { class: true });
       var h1_nodes = children(h1);
       a0 = claim_element(h1_nodes, "A", { href: true });
       var a0_nodes = children(a0);
@@ -55,6 +56,7 @@ function create_fragment(ctx) {
     h() {
       attr(a0, "href", base + "/");
       attr(a1, "href", base + "/about");
+      attr(h1, "class", "fond-bold space-x-2 text-3xl underline");
     },
     m(target, anchor) {
       insert_hydration(target, h1, anchor);
