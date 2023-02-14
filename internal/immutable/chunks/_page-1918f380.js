@@ -1,5 +1,4 @@
 const load = async ({ fetch }) => {
-  console.log("fetching");
   const fetchProducts = async () => {
     const productsRes = await fetch("https://dummyjson.com/products?limit=10&skip=10&select=title,price");
     const productsData = await productsRes.json();
