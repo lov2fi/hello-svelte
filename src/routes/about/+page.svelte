@@ -5,11 +5,15 @@
   const { users } = data;
 </script>
 
-{#each products as product}
-  <h2>{product.title}</h2>
-  <h3>($ {product.price})</h3>
-{/each}
+<h1 class="text-2xl font-bold">Async Waterfall Test</h1>
 
-{#each users as user}
-  <p>{user.firstName}({user.age})</p>
-{/each}
+<ul class="list-inside list-[upper-roman] p-10">
+  {#each products as product}
+    <li>{product.title} (only $ {product.price})</li>
+  {/each}
+</ul>
+<ul class="list-outside list-disc pl-10">
+  {#each users as user}
+    <li>{user.firstName} ({user.age})</li>
+  {/each}
+</ul>
