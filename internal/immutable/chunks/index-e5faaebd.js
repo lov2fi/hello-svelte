@@ -195,6 +195,10 @@ function space() {
 function empty() {
   return text("");
 }
+function listen(node, event, handler, options) {
+  node.addEventListener(event, handler, options);
+  return () => node.removeEventListener(event, handler, options);
+}
 function attr(node, attribute, value) {
   if (value == null)
     node.removeAttribute(attribute);
@@ -559,7 +563,8 @@ export {
   get_all_dirty_from_scope as G,
   get_slot_changes as H,
   component_subscribe as I,
-  destroy_each as J,
+  listen as J,
+  destroy_each as K,
   SvelteComponent as S,
   space as a,
   insert_hydration as b,
