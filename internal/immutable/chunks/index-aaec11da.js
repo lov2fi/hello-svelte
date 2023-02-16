@@ -20,6 +20,14 @@ function is_function(thing) {
 function safe_not_equal(a, b) {
   return a != a ? b == b : a !== b || (a && typeof a === "object" || typeof a === "function");
 }
+let src_url_equal_anchor;
+function src_url_equal(element_src, url) {
+  if (!src_url_equal_anchor) {
+    src_url_equal_anchor = document.createElement("a");
+  }
+  src_url_equal_anchor.href = url;
+  return element_src === src_url_equal_anchor.href;
+}
 function is_empty(obj) {
   return Object.keys(obj).length === 0;
 }
@@ -559,12 +567,13 @@ export {
   noop as C,
   create_slot as D,
   append_hydration as E,
-  update_slot_base as F,
-  get_all_dirty_from_scope as G,
-  get_slot_changes as H,
-  component_subscribe as I,
-  listen as J,
-  destroy_each as K,
+  listen as F,
+  update_slot_base as G,
+  get_all_dirty_from_scope as H,
+  get_slot_changes as I,
+  component_subscribe as J,
+  src_url_equal as K,
+  destroy_each as L,
   SvelteComponent as S,
   space as a,
   insert_hydration as b,
