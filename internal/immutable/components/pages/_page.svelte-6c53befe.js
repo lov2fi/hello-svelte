@@ -1,5 +1,4 @@
 import { S as SvelteComponent, i as init, s as safe_not_equal, k as element, a as space, q as text, l as claim_element, m as children, c as claim_space, r as claim_text, h as detach, n as attr, K as src_url_equal, b as insert_hydration, E as append_hydration, C as noop } from "../../chunks/index-aaec11da.js";
-import { b as base } from "../../chunks/paths-d0376391.js";
 function create_fragment(ctx) {
   let div;
   let img;
@@ -41,7 +40,7 @@ function create_fragment(ctx) {
     },
     h() {
       attr(img, "class", "object-cover");
-      if (!src_url_equal(img.src, img_src_value = base + "/pic/pexels-pixabay-40803.jpg"))
+      if (!src_url_equal(img.src, img_src_value = "https://images.pexels.com/photos/40803/lion-animal-predator-big-cat-40803.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=500&w=1200"))
         attr(img, "src", img_src_value);
       attr(img, "alt", "");
       attr(h3, "class", "mt-2 text-base font-medium tracking-tight text-slate-900 dark:text-white");
