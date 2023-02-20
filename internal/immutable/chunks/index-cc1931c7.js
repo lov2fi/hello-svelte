@@ -213,6 +213,9 @@ function attr(node, attribute, value) {
   else if (node.getAttribute(attribute) !== value)
     node.setAttribute(attribute, value);
 }
+function to_number(value) {
+  return value === "" ? null : +value;
+}
 function children(element2) {
   return Array.from(element2.childNodes);
 }
@@ -304,6 +307,9 @@ function set_data(text2, data) {
   data = "" + data;
   if (text2.wholeText !== data)
     text2.data = data;
+}
+function set_input_value(input, value) {
+  input.value = value == null ? "" : value;
 }
 function set_style(node, key, value, important) {
   if (value === null) {
@@ -573,7 +579,10 @@ export {
   get_slot_changes as I,
   component_subscribe as J,
   src_url_equal as K,
-  destroy_each as L,
+  set_input_value as L,
+  to_number as M,
+  destroy_each as N,
+  run_all as O,
   SvelteComponent as S,
   space as a,
   insert_hydration as b,
