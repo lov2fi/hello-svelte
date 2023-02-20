@@ -1,5 +1,4 @@
 <script>
-  import { base } from '$app/paths';
 </script>
 
 <div class="m-10 rounded-lg bg-white p-6 shadow-xl ring-1 ring-slate-900/5 dark:bg-slate-800">
