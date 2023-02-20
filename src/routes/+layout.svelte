@@ -15,8 +15,6 @@
   <div class="flex flex-row">
     <h1 class="fond-bold flex-auto space-x-2 text-3xl underline">
       <a href="{base}/">home</a>
-      <a href="{base}/blog/hello-world">hello</a>
-      <a href="{base}/blog/error-world">error</a>
       <a href="{base}/about">about</a>
     </h1>
     <button class="rounded-lg bg-slate-800 p-2 text-sm text-white shadow-xl" on:click={toggleMode}>mode</button>

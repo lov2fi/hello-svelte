@@ -1,5 +1,4 @@
 <script>
-  import { base } from '$app/paths';
   export let data;
   // console.log(data);
   const { products } = data;
@@ -9,16 +8,8 @@
   let b = 0;
   let total = 0;
 
-  async function add() {
-    const response = await fetch(base + '/api/add', {
-      method: 'POST',
-      body: JSON.stringify({ a, b }),
-      headers: {
-        'content-type': 'application/json'
-      }
-    });
-
-    total = await response.json();
+  function add() {
+    total = a + b;
   }
 </script>
 
