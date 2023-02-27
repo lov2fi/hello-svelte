@@ -14,7 +14,7 @@
 		<link rel="preload" as="script" crossorigin="anonymous" href="/hello-svelte/internal/immutable/entry/_layout.svelte.90769b7d.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="/hello-svelte/internal/immutable/entry/_layout.js.fb1865a6.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="/hello-svelte/internal/immutable/chunks/_layout.da46b06b.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="/hello-svelte/internal/immutable/entry/modern-page.svelte.63d0c945.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="/hello-svelte/internal/immutable/entry/regex-page.svelte.4b940658.mjs">
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
@@ -25,9 +25,12 @@
       <a href="/hello-svelte/regex">regex</a>
       <a href="/hello-svelte/about">about</a></h1>
     <button class="rounded-lg bg-slate-800 p-2 text-sm text-white shadow-xl">mode</button></div>
-  <div><h1>input value = false</h1>
-  <h1>nullish coalescing: false</h1>
-  <h1>logical operator: this is empty..</h1></div></div>
+  <div class="mt-10 border-2 border-red-400"><h1>sample</h1>
+  <input class="w-full" value="ab0c1d ef2g3hij"></div>
+<div class="mt-2 border-2 border-red-400"><h1>regex</h1>
+  <input class="w-full" placeholder="regular expression" value="[a-z]{2}\d\D"></div>
+<div class="mt-2 border-2 border-red-400"><h1>result</h1>
+  <input class="w-full font-bold italic" value="ab0c"></div></div>
 
 
 			
@@ -46,7 +49,7 @@
 						import("/hello-svelte/internal/immutable/entry/app.3a11b70b.mjs")
 					]).then(([kit, app]) => {
 						kit.start(app, __sveltekit_1eyzm9.element, {
-							node_ids: [0, 4],
+							node_ids: [0, 5],
 							data,
 							form: null,
 							error: null
