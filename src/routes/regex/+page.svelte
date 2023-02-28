@@ -17,15 +17,17 @@
   whenTyping();
 </script>
 
-<div class="mt-10 border-2 border-red-400">
-  <h1>sample</h1>
-  <input class="w-full" bind:value={txt} on:keyup={whenTyping} />
-</div>
-<div class="mt-2 border-2 border-red-400">
-  <h1>regex</h1>
-  <input class="w-full" bind:value={regex} placeholder="regular expression" on:keyup={whenTyping} />
-</div>
-<div class="mt-2 border-2 border-red-400">
-  <h1>result</h1>
-  <input class="w-full font-bold italic" bind:value={answer} />
+<div class="mx-auto flex h-2/3 w-2/3 flex-col-reverse items-center justify-around border-2">
+  <div class="w-2/3 border-2 border-red-400">
+    <h1>sample</h1>
+    <input class="w-full" bind:value={txt} on:keyup={whenTyping} />
+  </div>
+  <div class="w-2/3 border-2 border-red-400">
+    <h1>regex</h1>
+    <input class="w-full" bind:value={regex} placeholder="regular expression" on:keyup={whenTyping} />
+  </div>
+  <div class="w-2/3 border-2 border-red-400">
+    <h1>result</h1>
+    <input class="w-full font-bold italic" bind:value={answer} />
+  </div>
 </div>
