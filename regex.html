@@ -5,13 +5,13 @@
 		<link rel="icon" href="/hello-svelte/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
-		<link href="/hello-svelte/internal/immutable/assets/_layout.3562ce06.css" rel="stylesheet">
-		<link rel="preload" as="script" crossorigin="anonymous" href="/hello-svelte/internal/immutable/entry/start.e7e34de5.mjs">
+		<link href="/hello-svelte/internal/immutable/assets/_layout.1d28cc96.css" rel="stylesheet">
+		<link rel="preload" as="script" crossorigin="anonymous" href="/hello-svelte/internal/immutable/entry/start.113697d5.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="/hello-svelte/internal/immutable/chunks/index.d3439bce.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="/hello-svelte/internal/immutable/chunks/singletons.b0236637.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="/hello-svelte/internal/immutable/chunks/paths.827b8ba9.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="/hello-svelte/internal/immutable/entry/app.804f48f4.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="/hello-svelte/internal/immutable/entry/_layout.svelte.147d6032.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="/hello-svelte/internal/immutable/chunks/singletons.e37f2b83.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="/hello-svelte/internal/immutable/chunks/paths.1e2b88f0.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="/hello-svelte/internal/immutable/entry/app.816c7a72.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="/hello-svelte/internal/immutable/entry/_layout.svelte.2f3b32dd.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="/hello-svelte/internal/immutable/entry/_layout.js.fb1865a6.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="/hello-svelte/internal/immutable/chunks/_layout.da46b06b.mjs">
 		<link rel="preload" as="script" crossorigin="anonymous" href="/hello-svelte/internal/immutable/entry/regex-page.svelte.60c18e32.mjs">
@@ -20,23 +20,24 @@
 		<div style="display: contents">
 
 
-<div class="h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-4"><div class="flex flex-row"><h1 class="fond-bold flex-auto space-x-2 text-3xl underline"><a href="/hello-svelte/">home</a>
-      <a href="/hello-svelte/modern">modern</a>
-      <a href="/hello-svelte/regex">regex</a>
-      <a href="/hello-svelte/about">about</a></h1>
-    <button class="rounded-lg bg-slate-800 p-2 text-sm text-white shadow-xl">mode</button></div>
-  <div class="mx-auto flex h-2/3 w-2/3 flex-col-reverse items-center justify-around border-2"><div class="w-2/3 border-2 border-red-400"><h1>sample</h1>
+<header><nav class="flex items-center justify-between bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-4"><div class="p-2 font-bold text-purple-300"><a href="/hello-svelte/">🥩 hello-svelte</a></div>
+    <ul class="flex justify-around"><li class="rounded-lg p-2 hover:bg-amber-500"><a href="/hello-svelte/modern">modern</a></li>
+      <li class="rounded-lg p-2 hover:bg-amber-500"><a href="/hello-svelte/regex">regex</a></li>
+      <li class="rounded-lg p-2 hover:bg-amber-500"><a href="/hello-svelte/about">about</a></li></ul>
+    <div><button class="rounded-lg bg-slate-800 p-2 text-sm text-white hover:bg-slate-500">mode</button></div></nav></header>
+<main class="h-screen bg-gray-100 pt-4 dark:bg-gray-400"><div class="mx-auto flex h-2/3 w-2/3 flex-col-reverse items-center justify-around border-2"><div class="w-2/3 border-2 border-red-400"><h1>sample</h1>
     <input class="w-full" value="ab0c1d ef2g3hij"></div>
   <div class="w-2/3 border-2 border-red-400"><h1>regex</h1>
     <input class="w-full" placeholder="regular expression" value="[a-z]{2}\d\D"></div>
   <div class="w-2/3 border-2 border-red-400"><h1>result</h1>
-    <input class="w-full font-bold italic" value="ab0c"></div></div></div>
+    <input class="w-full font-bold italic" value="ab0c"></div></div></main>
+<footer class="bg-gray-100 dark:bg-gray-400"><p class="text-center">testing...</p></footer>
 
 
 			
 			<script>
 				{
-					__sveltekit_1ryrcs2 = {
+					__sveltekit_12wdbcp = {
 						env: {},
 						assets: "/hello-svelte",
 						element: document.currentScript.parentElement
@@ -45,10 +46,10 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("/hello-svelte/internal/immutable/entry/start.e7e34de5.mjs"),
-						import("/hello-svelte/internal/immutable/entry/app.804f48f4.mjs")
+						import("/hello-svelte/internal/immutable/entry/start.113697d5.mjs"),
+						import("/hello-svelte/internal/immutable/entry/app.816c7a72.mjs")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_1ryrcs2.element, {
+						kit.start(app, __sveltekit_12wdbcp.element, {
 							node_ids: [0, 5],
 							data,
 							form: null,
